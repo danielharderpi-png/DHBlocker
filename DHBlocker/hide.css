@@ -1,0 +1,33 @@
+/* Core Ad Networks */
+.adsbygoogle, [id^="div-gpt-ad"], [id^="google_ads"],
+.taboola, .trc_related_container, #taboola-below-article-thumbnails,
+.OUTBRAIN, .ob-widget,
+.amzn-native-ad, .amzn-native-container,
+[class*="celtra"], [id^="celtra-"],
+
+/* Common Universal Ad Classes */
+.ad-container, .ad-slot, .ad-wrapper, .ad-banner, .sidebar-ad,
+.advertisement, .ad-box, .sponsored-post, .sponsored-content,
+[class*="promoted-"], [class*="sponsored-"],
+
+/* Common Popups, Overlays, and Interstitials */
+.age-gate, #age-verification, #age-check, .age-verification-modal,
+.cookie-banner, .newsletter-popup,
+[id*="onesignal"], [class*="onesignal"],
+.interstitial, [id*="interstitial"], [class*="interstitial"],
+.modal, .overlay, .modal-backdrop, .modal-content, .popup-container {
+  display: none !important;
+}
+
+/* Common Ad Container IDs (From EasyList) */
+#AdContainer,#BannerAd,#BottomAdContainer,#ContentAd,#FooterAd,
+#GoogleAd,#HeaderAd,#SidebarAd,#TopAd,#ad-banner,#ad-container,
+#ad-sidebar,#adsense,#google_ads,#sponsor-ad {
+    display: none !important;
+}
+
+/* Common Ad Container Classes (From EasyList) */
+.AdContainer,.AdSense,.AdUnit,.Banner300x250,.ContentAds,
+.SidebarAd,.SponsoredLinks,.ad-banner,.ad-container,.google_ads {
+    display: none !important;
+}

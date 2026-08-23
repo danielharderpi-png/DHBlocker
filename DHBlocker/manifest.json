@@ -1,0 +1,20 @@
+{
+  "name": "DHBlocker",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "DHBlocker16.png",
+    "48": "DHBlocker48.png",
+    "128": "DHBlocker128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "css": ["hide.css"],
+      "js": ["blocker.js"]
+    }
+  ]
+}
