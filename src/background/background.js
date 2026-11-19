@@ -60,7 +60,7 @@ async function activeTab() {
 }
 
 function injectable(tab) {
-  return tab && tab.id != null && /^https?:/.test(tab.url || '');
+  return tab && tab.id != null && /^(https?|file):/.test(tab.url || '');
 }
 
 async function startZapper(tabId) {

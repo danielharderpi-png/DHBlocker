@@ -5,7 +5,7 @@
 
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
   const url = tab && tab.url ? safeUrl(tab.url) : null;
-  const scriptable = !!url && /^https?:$/.test(url.protocol);
+  const scriptable = !!url && /^(https?|file):$/.test(url.protocol);
   const host = scriptable ? DH.normalizeHost(url.hostname) : '';
 
   function safeUrl(u) { try { return new URL(u); } catch (e) { return null; } }
