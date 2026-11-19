@@ -9,7 +9,7 @@ Own your web: fast native network blocking, safe annoyance filters, focus preset
 ## Features
 - **Shield** – `declarativeNetRequest` rulesets (`rules/*.json`) for ads, trackers and annoyance SDKs. Blocked count shows on the toolbar badge.
 - **Filters** – cosmetic packs for ads, cookie banners, newsletter/sign-in nags, chat widgets. Injected at `document_start`, never deletes iframes or generic `.modal` UI.
-- **Zapper** (`Alt+Shift+Z`) – hover + click an element. `↑/↓` or `Alt+wheel` step parent/child, `Enter` hide & remember, `Del` hide once, `S` hide similar, `Ctrl+Z` undo, `Esc` exit. Selectors avoid hashed/utility classes.
+- **Zapper** (toggle from the popup or `Alt+Shift+Z`) � click every element you want gone (click again to unselect), then **Done** hides them all at once and remembers them for the site. `?/?` or `Alt+wheel` = parent/child, `S` = add similar, `Enter` = done, `Backspace`/`Ctrl+Z` = undo last pick, `Esc` = cancel.
 - **Unfreeze page** (`Alt+Shift+U`) – removes scroll locks, blocking overlays and paywall blur.
 - **Focus presets** – YouTube Shorts/recs, Reddit, X, LinkedIn, Facebook (off by default).
 - **Studio** (options page) – manage zaps, paused sites, presets; import/export JSON.

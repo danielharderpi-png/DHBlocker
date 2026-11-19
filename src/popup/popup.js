@@ -97,6 +97,15 @@
 
   $('dash').addEventListener('click', () => { chrome.runtime.openOptionsPage(); window.close(); });
 
+  async function zapperState() {
+    if (!tab || !scriptable) return;
+    try {
+      const [r] = await chrome.scripting.executeScript({ target: { tabId: tab.id }, func: () => !!window.__dhZapper });
+      if (r && r.result) $('zap').textContent = '⚡ Zapper on — click to cancel';
+    } catch (e) { /* not scriptable */ }
+  }
+
   render();
   blockedCount();
+  zapperState();
 })();
