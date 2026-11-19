@@ -32,13 +32,13 @@
   "commands": {
     "toggle-zapper": {
       "suggested_key": {
-        "default": "Alt+Z"
+        "default": "Alt+Shift+Z"
       },
       "description": "Start / stop the element zapper"
     },
     "unfreeze-page": {
       "suggested_key": {
-        "default": "Alt+U"
+        "default": "Alt+Shift+U"
       },
       "description": "Unfreeze page (remove scroll locks and blocking overlays)"
     }

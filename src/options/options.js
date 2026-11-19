@@ -35,7 +35,7 @@
     // zaps
     const zaps = $('zaps'); zaps.innerHTML = '';
     const hosts = Object.keys(s.zaps).sort();
-    if (!hosts.length) zaps.innerHTML = '<div class="empty">No saved zaps yet. Press Alt+Z on any page to start.</div>';
+    if (!hosts.length) zaps.innerHTML = '<div class="empty">No saved zaps yet. Press Alt+Shift+Z on any page to start.</div>';
     for (const h of hosts) {
       const block = document.createElement('div');
       block.className = 'site-block';
