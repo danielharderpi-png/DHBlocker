@@ -1,0 +1,248 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "requestDomains": [
+        "doubleclick.net",
+        "googlesyndication.com",
+        "googleadservices.com",
+        "googletagservices.com",
+        "adservice.google.com",
+        "2mdn.net",
+        "adnxs.com",
+        "adsrvr.org",
+        "advertising.com",
+        "criteo.com",
+        "criteo.net",
+        "taboola.com",
+        "outbrain.com",
+        "outbrainimg.com",
+        "amazon-adsystem.com",
+        "rubiconproject.com",
+        "pubmatic.com",
+        "openx.net",
+        "casalemedia.com",
+        "indexww.com",
+        "smartadserver.com",
+        "adform.net",
+        "moatads.com",
+        "adsafeprotected.com",
+        "doubleverify.com",
+        "33across.com",
+        "sharethrough.com",
+        "teads.tv",
+        "media.net",
+        "bidswitch.net",
+        "contextweb.com",
+        "lijit.com",
+        "sovrn.com",
+        "yieldmo.com",
+        "triplelift.com",
+        "gumgum.com",
+        "revcontent.com",
+        "mgid.com",
+        "zemanta.com",
+        "adroll.com",
+        "bluekai.com",
+        "exelator.com",
+        "demdex.net",
+        "krxd.net",
+        "rlcdn.com",
+        "mathtag.com",
+        "serving-sys.com",
+        "adition.com",
+        "popads.net",
+        "exoclick.com",
+        "exosrv.com",
+        "juicyads.com",
+        "clickadu.com",
+        "adcash.com",
+        "popcash.net",
+        "onclickads.net",
+        "realsrv.com",
+        "tsyndicate.com",
+        "hilltopads.net",
+        "adsterra.com"
+      ],
+      "domainType": "thirdParty",
+      "resourceTypes": [
+        "script",
+        "image",
+        "stylesheet",
+        "xmlhttprequest",
+        "sub_frame",
+        "ping",
+        "media",
+        "font",
+        "websocket",
+        "other"
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "requestDomains": [
+        "highperformanceformat.com",
+        "effectivegatecpm.com",
+        "trafficjunky.net",
+        "trafficfactory.biz",
+        "tapad.com",
+        "adblade.com",
+        "adsymptotic.com",
+        "ad.gt",
+        "adtechus.com",
+        "yahoo-ads.com",
+        "advertising.yahoo.com",
+        "ads.yahoo.com",
+        "adkernel.com",
+        "richaudience.com",
+        "improvedigital.com",
+        "connatix.com",
+        "primis.tech",
+        "vidazoo.com",
+        "spotxchange.com",
+        "springserve.com",
+        "freewheel.tv",
+        "fwmrm.net",
+        "innovid.com",
+        "tremorhub.com",
+        "undertone.com",
+        "inmobi.com",
+        "mopub.com",
+        "applovin.com",
+        "unityads.unity3d.com",
+        "adcolony.com",
+        "chartboost.com",
+        "ads.linkedin.com",
+        "ads.pinterest.com",
+        "ads.reddit.com",
+        "ads.tiktok.com",
+        "bing.net.ads",
+        "cpmstar.com",
+        "propellerads.com",
+        "pushnami.com",
+        "zedo.com",
+        "nativeroll.tv",
+        "content.ad",
+        "dable.io",
+        "ligatus.com",
+        "plista.com",
+        "adblockanalytics.com"
+      ],
+      "domainType": "thirdParty",
+      "resourceTypes": [
+        "script",
+        "image",
+        "stylesheet",
+        "xmlhttprequest",
+        "sub_frame",
+        "ping",
+        "media",
+        "font",
+        "websocket",
+        "other"
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||facebook.com/tr/",
+      "domainType": "thirdParty",
+      "resourceTypes": [
+        "script",
+        "image",
+        "stylesheet",
+        "xmlhttprequest",
+        "sub_frame",
+        "ping",
+        "media",
+        "font",
+        "websocket",
+        "other"
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/pagead/js/adsbygoogle.js",
+      "domainType": "thirdParty",
+      "resourceTypes": [
+        "script",
+        "image",
+        "stylesheet",
+        "xmlhttprequest",
+        "sub_frame",
+        "ping",
+        "media",
+        "font",
+        "websocket",
+        "other"
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/pagead/ads?",
+      "domainType": "thirdParty",
+      "resourceTypes": [
+        "script",
+        "image",
+        "stylesheet",
+        "xmlhttprequest",
+        "sub_frame",
+        "ping",
+        "media",
+        "font",
+        "websocket",
+        "other"
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||amazon.com/aax2/apstag.js",
+      "domainType": "thirdParty",
+      "resourceTypes": [
+        "script",
+        "image",
+        "stylesheet",
+        "xmlhttprequest",
+        "sub_frame",
+        "ping",
+        "media",
+        "font",
+        "websocket",
+        "other"
+      ]
+    }
+  }
+]

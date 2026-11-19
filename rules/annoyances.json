@@ -1,0 +1,85 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "requestDomains": [
+        "widget.intercom.io",
+        "js.intercomcdn.com",
+        "js.driftt.com",
+        "drift.com",
+        "client.crisp.chat",
+        "embed.tawk.to",
+        "tawk.to",
+        "code.tidio.co",
+        "static.zdassets.com",
+        "ekr.zdassets.com",
+        "wchat.freshchat.com",
+        "cdn.livechatinc.com",
+        "config.gorgias.chat",
+        "chatra.io",
+        "cdn.onesignal.com",
+        "onesignal.com",
+        "pushwoosh.com",
+        "pushengage.com",
+        "webpushr.com",
+        "izooto.com",
+        "subscribers.com",
+        "notix.io",
+        "pushcrew.com",
+        "cleverpush.com",
+        "cdn.privy.com",
+        "widget.privy.com",
+        "sumo.com",
+        "sumome.com",
+        "optinmonster.com",
+        "omappapi.com",
+        "mailmunch.co",
+        "popupsmart.com",
+        "wisepops.com",
+        "justuno.com",
+        "getsitecontrol.com",
+        "convertflow.com"
+      ],
+      "domainType": "thirdParty",
+      "resourceTypes": [
+        "script",
+        "image",
+        "stylesheet",
+        "xmlhttprequest",
+        "sub_frame",
+        "ping",
+        "media",
+        "font",
+        "websocket",
+        "other"
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||sendpulse.com/push",
+      "domainType": "thirdParty",
+      "resourceTypes": [
+        "script",
+        "image",
+        "stylesheet",
+        "xmlhttprequest",
+        "sub_frame",
+        "ping",
+        "media",
+        "font",
+        "websocket",
+        "other"
+      ]
+    }
+  }
+]

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>DHBlocker</title>
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="../../assets/icons/DHBlocker48.png" alt="" width="28" height="28">
+    <div class="brand">DHBlocker</div>
+    <button id="dash" class="btn small" title="Open dashboard">⚙ Dashboard</button>
+  </header>
+
+  <section class="site card">
+    <div>
+      <div id="host" class="host">…</div>
+      <div id="siteState" class="muted small">Protected</div>
+    </div>
+    <label class="switch" title="Protect this site"><input type="checkbox" id="siteToggle"><span></span></label>
+  </section>
+
+  <section class="actions">
+    <button id="zap" class="btn primary">⚡ Zap element</button>
+    <button id="unfreeze" class="btn">🔓 Unfreeze page</button>
+  </section>
+  <div class="hint muted small">Shortcuts: <kbd>Alt+Shift+Z</kbd> zap · <kbd>Alt+Shift+U</kbd> unfreeze</div>
+
+  <section class="stats">
+    <div class="stat"><b id="blocked">0</b><span>blocked here</span></div>
+    <div class="stat"><b id="siteZaps">0</b><span>zaps on site</span></div>
+    <div class="stat"><b id="totalZaps">0</b><span>zaps total</span></div>
+  </section>
+
+  <section class="card cats" id="cats"></section>
+
+  <footer>
+    <label class="row"><span>Pause everywhere</span>
+      <label class="switch"><input type="checkbox" id="pauseAll"><span></span></label>
+    </label>
+  </footer>
+  <div id="toast" class="toast"></div>
+  <script src="../content/data.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

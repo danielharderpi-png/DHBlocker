@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>DHBlocker breakage fixture</title>
+<style>
+  body{font:15px system-ui;max-width:760px;margin:30px auto;padding:0 16px}
+  .box{border:1px solid #ccc;padding:12px;margin:12px 0;border-radius:8px}
+  .ok::before{content:"MUST STAY VISIBLE \2014  ";color:#0a7;font-weight:700}
+  .gone::before{content:"MUST BE HIDDEN \2014  ";color:#c03;font-weight:700}
+  .modal{background:#eef;padding:12px;border:1px solid #99c}
+  .frozen{overflow:hidden}
+  #lock-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:9999;display:none}
+  #lock-overlay.on{display:block}
+  #lock-overlay div{background:#fff;margin:20vh auto;width:320px;padding:20px;border-radius:10px}
+</style>
+</head>
+<body>
+<h1>DHBlocker fixture</h1>
+<p>Open this file in Chrome (enable "Allow access to file URLs" for DHBlocker, or serve with <code>npx serve test</code>).</p>
+
+<div class="box ok"><div class="modal">A normal inline <code>.modal</code> / dialog (e.g. a Bootstrap settings dialog).</div></div>
+<div class="box ok">
+  <iframe title="payment" srcdoc="<body style='font:14px sans-serif'>Stripe-style card iframe (same origin srcdoc)</body>" width="100%" height="50"></iframe>
+</div>
+<div class="box ok"><div id="app"><iframe title="video" srcdoc="<body>Embedded video-like iframe inside #app wrapper</body>" width="100%" height="40"></iframe></div></div>
+<div class="box ok"><div class="ad-notes">Text in a class that merely contains "ad" like "download"/"header" must stay.</div></div>
+
+<div class="box gone"><div class="ad-slot">Generic .ad-slot</div></div>
+<div class="box gone"><ins class="adsbygoogle">adsbygoogle</ins></div>
+<div class="box gone"><div id="div-gpt-ad-1234">GPT slot</div></div>
+<div class="box"><div class="advertisement-wrapper ad-wrapper"><div class="ad-slot"></div></div>(wrapper above should collapse, no empty gap)</div>
+<div class="box gone"><div id="onetrust-banner-sdk">Cookie banner</div></div>
+<div class="box gone"><div id="intercom-container">Chat widget</div></div>
+<div class="box"><button id="lock">Simulate scroll-locking modal</button> then click the extension's <b>Unfreeze page</b>.</div>
+
+<div id="lock-overlay"><div class="modal">Newsletter wall! (class contains modal)</div></div>
+<div style="height:1500px"></div>
+<p>Bottom of page (scrolling should work after Unfreeze).</p>
+<script>
+  document.getElementById('lock').onclick = function(){
+    document.documentElement.classList.add('frozen'); document.body.classList.add('modal-open');
+    document.body.style.overflow='hidden'; document.getElementById('lock-overlay').classList.add('on');
+  };
+</script>
+</body>
+</html>

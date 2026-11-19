@@ -1,0 +1,61 @@
+{
+  "manifest_version": 3,
+  "name": "DHBlocker",
+  "version": "2.0.0",
+  "description": "Own your web: fast network blocking, safe annoyance filters, focus presets and a persistent point-and-zap element remover.",
+  "minimum_chrome_version": "111",
+  "permissions": [
+    "storage",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "src/background/background.js"
+  },
+  "action": {
+    "default_title": "DHBlocker",
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "assets/icons/DHBlocker16.png",
+      "48": "assets/icons/DHBlocker48.png"
+    }
+  },
+  "options_page": "src/options/options.html",
+  "icons": {
+    "16": "assets/icons/DHBlocker16.png",
+    "48": "assets/icons/DHBlocker48.png",
+    "128": "assets/icons/DHBlocker128.png"
+  },
+  "commands": {
+    "toggle-zapper": {
+      "suggested_key": {
+        "default": "Alt+Shift+Z"
+      },
+      "description": "Start / stop the element zapper"
+    },
+    "unfreeze-page": {
+      "suggested_key": {
+        "default": "Alt+Shift+U"
+      },
+      "description": "Unfreeze page (remove scroll locks and blocking overlays)"
+    }
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      { "id": "ads", "enabled": true, "path": "rules/ads.json" },
+      { "id": "trackers", "enabled": true, "path": "rules/trackers.json" },
+      { "id": "annoyances", "enabled": true, "path": "rules/annoyances.json" }
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["src/content/data.js", "src/content/cosmetic.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ]
+}

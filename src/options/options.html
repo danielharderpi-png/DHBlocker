@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>DHBlocker Studio</title>
+  <link rel="stylesheet" href="../popup/common.css">
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="../../assets/icons/DHBlocker128.png" width="52" height="52" alt="">
+      <div>
+        <h1>DHBlocker Studio</h1>
+        <div class="muted">Own your web. Everything runs locally, nothing leaves your browser.</div>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>Protection</h2>
+      <div id="cats" class="grid"></div>
+    </section>
+
+    <section class="card">
+      <h2>Focus presets</h2>
+      <div class="muted pad">Platform-specific de-cluttering. Off by default.</div>
+      <div id="focus" class="grid"></div>
+    </section>
+
+    <section class="card">
+      <h2>Saved zaps</h2>
+      <div class="muted pad">Elements you removed with the Zapper, per site. Toggle to test, delete to forget.</div>
+      <div id="zaps"></div>
+    </section>
+
+    <section class="card">
+      <h2>Paused sites</h2>
+      <div class="muted pad">DHBlocker is fully off on these sites (network + cosmetic).</div>
+      <div class="inline"><input id="newHost" placeholder="example.com"><button id="addHost" class="btn small">Add</button></div>
+      <div id="allow"></div>
+    </section>
+
+    <section class="card">
+      <h2>Backup &amp; share</h2>
+      <div class="muted pad">Export your settings, zaps and paused sites as JSON; import to restore or share a "site recipe".</div>
+      <div class="inline">
+        <button id="export" class="btn small">Export JSON</button>
+        <button id="import" class="btn small">Import JSON…</button>
+        <button id="reset" class="btn small danger">Reset everything</button>
+        <input type="file" id="file" accept="application/json" hidden>
+      </div>
+      <div id="status" class="muted pad"></div>
+    </section>
+  </div>
+  <script src="../content/data.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
